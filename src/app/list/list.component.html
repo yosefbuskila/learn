@@ -1,5 +1,5 @@
-<ul >
-    <li *ngFor='let post of posts'  >
+<ul  *ngIf='myService'>
+    <li *ngFor='let post of myService.posts'  >
       <ul>
         <li>{{post.name}}</li>
         <li>{{post.text}}</li>
@@ -8,3 +8,5 @@
       <br>
     </li>
 </ul> 
+
+<!-- 11111   {{myService|json}}   222222 -->

@@ -1,3 +1,9 @@
-<p>
-  add works!
-</p>
+<form [formGroup]='profileForm' (submit)='onSubmit()'>
+  <label for>name<input type="text" formControlName='name'></label>
+  <label for>text<input type="text" formControlName='text'></label>
+  <label for>like<input type="number" formControlName='like'></label>
+  <input type="submit">
+</form>
+{{profileForm.value|json}} <br>
+{{myServic.posts|json}}
+

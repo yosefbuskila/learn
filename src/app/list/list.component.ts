@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { postModel } from '../postModel';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-list',
@@ -7,27 +8,13 @@ import { postModel } from '../postModel';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-posts:postModel[];
-  constructor() { }
+
+  constructor(
+    public myService:MyServiceService
+  ) { }
 
   ngOnInit() {
-    this.posts=[
-      {
-        name:'moshe',
-        text:'hi ma nishma',
-        like:5
-    },
-      {
-        name:'dani',
-        text:'yesh chagiga',
-        like:4
-    },
-      {
-        name:'moshe',
-        text:'heloooow',
-        like:8
-    }
-    ]
+    
   }
 
 

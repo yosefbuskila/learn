@@ -7,3 +7,7 @@ div h1{
     color: white;
     padding: 90px 35%;
 }
+a{
+    display: block;
+    padding: 10px;
+}
